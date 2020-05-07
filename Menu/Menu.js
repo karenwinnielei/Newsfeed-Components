@@ -31,12 +31,12 @@ topMenu.classList.add('menu')
   // Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   // Add those items to the <ul>
 
-for(let i = 0; i < menuItems.length; i++){
-  const newLi = document.createElement('li')
-  newLi.textContent = menuItems[i];
-  topUl.appendChild(newLi)
-  console.log(newLi)
-}
+  menuItems.forEach(item=>{
+    const newLi = document.createElement('li')
+    newLi.textContent = item;
+    topUl.appendChild(newLi)
+  })
+
 
 // Step 3: Using a DOM selector, select the menu button (the element with a class of 'menu-button') currently on the DOM.
 
